@@ -10,6 +10,7 @@ import { CrearCategoriaComponent } from './components/categorias/crear-categoria
 import { EditarCategoriaComponent } from './components/categorias/editar-categoria/editar-categoria.component';
 import { ListarCategoriaComponent } from './components/categorias/listar-categoria/listar-categoria.component';
 import { EliminarCategoriaComponent } from './components/categorias/eliminar-categoria/eliminar-categoria.component';
+import { HomeParamComponent } from './pages/home-param/home-param.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { EliminarCategoriaComponent } from './components/categorias/eliminar-cat
     CrearCategoriaComponent,
     EditarCategoriaComponent,
     ListarCategoriaComponent,
-    EliminarCategoriaComponent
+    EliminarCategoriaComponent,
+    HomeParamComponent
   ],
   imports: [
     CommonModule,

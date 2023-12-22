@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './shared/pages/home/home.component';
+import { ErrorsComponent } from './shared/pages/errors/errors.component';
 
 const routes: Routes = [
   {
@@ -13,13 +14,28 @@ const routes: Routes = [
       import('./productos/productos.module').then((m) => m.ProductosModule),
   },
   {
+    path: 'parametros',
+    loadChildren: () =>
+      import('./parametros/parametros.module').then((m) => m.ParametrosModule),
+  },
+  {
+    path: 'reportes',
+    loadChildren: () =>
+      import('./reportes/reportes.module').then((m) => m.ReportesModule),
+  },
+  {
+    path: 'seguridad',
+    loadChildren: () =>
+      import('./seguridad/seguridad.module').then((m) => m.SeguridadModule),
+  },
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'home',
   },
   {
     path: '**',
-    redirectTo: 'home',
+    component: ErrorsComponent,
   },
 ];
 
