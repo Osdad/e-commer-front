@@ -1,0 +1,40 @@
+
+nav .nav-wrapper {
+  margin-right: 0px;
+}
+.input-field{
+  height: 45px;
+  border-radius: 50%;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgba(134, 129, 129, 0.54);
+}
+
+.search-icon {
+  position: absolute;
+  top: 0;
+  padding-left: 20px;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+input.search-field {
+  font-weight: 400;
+  color: rgba(71, 172, 212, 0.54);
+  border-radius: 2px;
+  border: 0;
+  border-radius: 5px;
+  height: 36px;
+  padding: 8px 8px 8px 60px;
+  width: 400px;
+  background: #f7f7f7;
+  transition: background 0.2s, width .2s;
+}
+
+input.search-field:hover {
+  background: #ebebeb;
+}
+.searchbox {
+  position: relative;
+}

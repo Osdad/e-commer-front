@@ -1,1 +1,23 @@
-<p>crear-marca works!</p>
+<div class="login-page">
+  <h3>Crear Marca</h3>
+  <div class="form">
+    <form
+      [formGroup]="formMarca"
+      (ngSubmit)="crearMarca()"
+      autocomplete="off"
+      class="login-form"
+    >
+      <input formControlName="nombre" type="text" placeholder="nombre" />
+      <button
+        type="submit"
+        class="btn btn-success"
+        [disabled]="formMarca.invalid"
+      >
+        Guardar
+      </button>
+      <a routerLink="/parametros/marcas"
+        ><button class="btn btn-danger red">Cancelar</button></a
+      >
+    </form>
+  </div>
+</div>

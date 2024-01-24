@@ -1,1 +1,69 @@
-<p>login works!</p>
+<div id="login-page" class="row">
+  <h3>Login</h3>
+  <div class="col s12 z-depth-6 card-panel">
+    <form
+      [formGroup]="formLogin"
+      (ngSubmit)="login()"
+      autocomplete="off"
+      class="login-form"
+    >
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">mail_outline</i>
+          <input
+            formControlName="usuario"
+            id="user"
+            type="text"
+            class="validate"
+            placeholder=" "
+          />
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock_outline</i>
+          <input
+            formControlName="clave"
+            id="password"
+            type="password"
+            class="validate"
+            placeholder=" "
+            maxlength="20"
+          />
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <div class="input-field col s9 m9 l9">
+          <button
+            type="submit"
+            class="btn filled"
+            [disabled]="formLogin.invalid"
+          >
+            Ingresar
+          </button>
+        </div>
+        <div class="input-field col s3 m3 l3">
+          <label>
+            <input type="checkbox" />
+            <span>Recuerdame</span>
+          </label>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="input-field col s6 m6 l6">
+          <p class="margin medium-small">
+            <a routerLink="/seguridad/crear-usuario">Registrate Ahora!</a>
+          </p>
+        </div>
+        <div class="input-field col s6 m6 l6">
+          <p class="margin right-align medium-small">
+            <a routerLink="/seguridad/recuperar">Olvido su Contraseña?</a>
+          </p>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

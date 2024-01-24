@@ -1,1 +1,34 @@
-<p>listar-marca works!</p>
+<div class="container mt-2">
+  <h3>Gestion de Marcas</h3>
+  <a routerLink="/parametros/marcas/crear" class="btn btn-success"
+    >Nueva Marca</a
+  >
+
+  <table class="table responsive-table">
+    <thead>
+      <th>id:</th>
+      <th>Nombre:</th>
+      <th>Gestión:</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let marca of listadoMarcas">
+        <td>{{ marca.id }}</td>
+        <td>{{ marca.nombre }}</td>
+        <td>
+          <a
+            routerLink="/parametros/marcas/editar"
+            class="btn mr-1"
+            title="Editar Registro"
+            ><i class="material-icons">edit</i></a
+          >
+          <a
+            routerLink="/parametros/marcas/eliminar"
+            class="btn"
+            title="Eliminar Registro"
+            ><i class="material-icons">delete</i></a
+          >
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

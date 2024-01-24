@@ -6,6 +6,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SearchBoxComponent } from './components/search-box/search-box.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HomeComponent } from './pages/home/home.component';
     HeaderComponent,
     HomeComponent,
     NavBarComponent,
+    SearchBoxComponent,
   ],
   imports: [CommonModule, RouterModule],
   exports: [HeaderComponent, FooterComponent, NavBarComponent],

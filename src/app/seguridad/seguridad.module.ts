@@ -1,17 +1,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { SeguridadRoutingModule } from './seguridad-routing.module';
+import { CambiarClaveComponent } from './pages/cambiar-clave/cambiar-clave.component';
+import { EditUserComponent } from './components/user/edit-user/edit-user.component';
+import { HomeSecurity } from './pages/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { CambiarClaveComponent } from './components/cambiar-clave/cambiar-clave.component';
-import { RecuperarClaveComponent } from './components/recuperar-clave/recuperar-clave.component';
+import { LogoutComponent } from './components/logout/logout.component';
+import { RecuperarClaveComponent } from './pages/recuperar-clave/recuperar-clave.component';
+import { RemoveUserComponent } from './components/user/remove-user/remove-user.component';
+import { SeguridadRoutingModule } from './seguridad-routing.module';
+import { UserCreateComponent } from './components/user/user-create/user-create.component';
 
 @NgModule({
   declarations: [
-    LoginComponent,
     CambiarClaveComponent,
+    EditUserComponent,
+    HomeSecurity,
+    LoginComponent,
+    LogoutComponent,
     RecuperarClaveComponent,
+    RemoveUserComponent,
+    UserCreateComponent,
   ],
-  imports: [CommonModule, SeguridadRoutingModule],
+  imports: [CommonModule, ReactiveFormsModule, SeguridadRoutingModule],
 })
 export class SeguridadModule {}
